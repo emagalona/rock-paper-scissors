@@ -76,8 +76,16 @@ function game(){
         alert(result);
     }
 
-    alert(playerScore);
-    alert(computerScore);
+    if(playerScore > computerScore){
+        alert('Player beat Computer');
+    } else if (playerScore < computerScore){
+        alert('Computer beat Player');
+    } else {
+        alert('The result is Tie!');
+    }
+
+    alert(`Player Score ${playerScore}`);
+    alert(`Computer Score ${computerScore}`);
 }
 
 game();

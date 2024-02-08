@@ -59,9 +59,7 @@ function game(){
     let playerScore = 0;
     let computerScore = 0;
 
-    
-
-    for(let i=0; i <5; i++){
+    for(let i=0; i <=5; i++){
 
         const computerChoice = getComputerChoice();
         const playerChoice = prompt(`What's your choice?`);
@@ -88,4 +86,3 @@ function game(){
     alert(`Computer Score ${computerScore}`);
 }
 
-game();

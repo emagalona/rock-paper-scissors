@@ -1,0 +1,26 @@
+*{
+    border: 1px solid red;
+}
+.canvas{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection{
+    display: flex;
+}
+.options{
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.options button {
+    margin: 20px;
+}

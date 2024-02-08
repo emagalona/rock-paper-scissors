@@ -29,9 +29,8 @@ body {
     padding: 20px;
 }
 
-.selection div {
-    border: 1px solid red;
-
+.runGame {
+    margin-top: 7%;
 }
 
 .playerSelection{
@@ -41,6 +40,11 @@ body {
     align-items: center;
     height: 200px;
     width: 200px;
+    border: 1px solid #018ABE;
+    background-color: #018ABE;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .displaySelection{
@@ -62,6 +66,13 @@ body {
 .runGame button {
     padding: 10px;
     border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #001B4B;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Protest Guerrilla', sans-serif;
 }
 
 button:hover{
@@ -71,4 +82,13 @@ button:hover{
 button:active {
     
     transform: translateY(4px);
+}
+
+.output{
+    height: 100px;
+    border: 1px solid #018ABE;
+    background-color: #018ABE;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }

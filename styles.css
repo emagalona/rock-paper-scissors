@@ -5,6 +5,8 @@ body {
     align-items: center;
     flex-direction: column;
     color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Protest Guerrilla', sans-serif;
 }
 .canvas{
     display: flex;
@@ -42,7 +44,7 @@ body {
 }
 
 .displaySelection{
-
+    font-size: 100px;
 }
 .options button {
     padding: 10px;

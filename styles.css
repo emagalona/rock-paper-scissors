@@ -1,6 +1,4 @@
-*{
-    border: 1px solid red;
-}
+
 .canvas{
     display: flex;
     flex-direction: column;
@@ -12,15 +10,32 @@
     align-items: center;
 }
 
-.selection{
+.selection, .options, .output{
     display: flex;
-}
-.options{
-    display: flex;
+    justify-content: space-around;
+    width: 80%;
     margin: 20px;
-    justify-content: space-between;
+    padding: 20px;
 }
 
-.options button {
-    margin: 20px;
+.options {
+
+}
+button {
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    font-size: 150px;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: #999999;
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }

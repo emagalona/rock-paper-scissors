@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Rock Paper Scissors Game</h1>
     <div class="canvas">
         <div class="options">
             <button>✊</button>
             <button>✋</button>
             <button>✌️</button>
         </div>
-        <div class="runGame">Fight!</div>
+        <div class="runGame"><button>Play Round</button></div>
         <div class="selection">
-            <div class="playerSelection">Player's Selection</div>
-            <div><span>V.S.</span></div>
-            <div class="computerSelection">Computer's Selection</div>
+            <div class="playerSelection">
+                <span>Player's Selection</span>
+                <span class="displaySelection">✊</span>
+            </div>
+            <div class="playerSelection">
+                <span>Computer's Selection</span>
+                <span class="displaySelection">✋</span>
+            </div>
         </div>
         <div class="output">Output</div>
     </div>

@@ -1,13 +1,22 @@
-
+body {
+    background-color: #018ABE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+}
 .canvas{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     width: 80%;
-    margin: 50px auto;
+    margin: 10px auto;
     padding: 20px;
     justify-content: center;
     align-items: center;
+    background-color: #02457A;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
 }
 
 .selection, .options, .output{
@@ -18,24 +27,46 @@
     padding: 20px;
 }
 
-.options {
+.selection div {
+    border: 1px solid red;
 
 }
-button {
+
+.playerSelection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+}
+
+.displaySelection{
+
+}
+.options button {
     padding: 10px;
     border-radius: 5px;
     width: 200px;
     height: 200px;
     font-size: 150px;
     cursor: pointer;
+    text-align: center;
+    background-color: #001B4B;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #018ABE;
+}
 
+.runGame button {
+    padding: 10px;
+    border-radius: 5px;
 }
 
 button:hover{
-    background-color: #999999;
+    background-color: #01BABE;   
 }
 
 button:active {
-    box-shadow: 0 5px #666;
+    
     transform: translateY(4px);
 }

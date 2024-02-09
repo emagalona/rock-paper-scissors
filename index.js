@@ -13,111 +13,82 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-/*Convert Selection to Numeric Value*/
-function convertSelection(selection){
-    let numericVal = 0;
-    const selectionToUpper = selection.toUpperCase();
-
-    if(selectionToUpper == 'ROCK') { 
-        numericVal = 1;
-    } else if (selectionToUpper == 'PAPER') {
-        numericVal = 2;
-    } else if (selectionToUpper == 'SCISSORS') {
-        numericVal = 3;
-    }
-
-    return numericVal;
-    
-}
-
-/*Play Round*/
-function playRound(computerSelection, playerSelection) { 
-
-    
-    const selectionArr = ['Rock', 'Paper', 'Scissors'];
-    
-
-    const convertedComputerSelection = convertSelection(computerSelection);
-    const convertedPlayerSelection = convertSelection(playerSelection);
-
-    let result = `${selectionArr[convertedComputerSelection - 1]} beats ${selectionArr[convertedPlayerSelection - 1]}`;
-
-    if(convertedComputerSelection > convertedPlayerSelection){
-        result = `You Lose! ${result}`;
-    } else if (convertedComputerSelection == convertedPlayerSelection) {
-        result = 'The result is Tie!'
-    } else {
-        result = `You Win! ${result}`;
-    }
-
-    return result;
-}
-
-/*Play the Whole Game*/
-function game(){
-
-    let playerScore = 0;
-    let computerScore = 0;
-
-    for(let i=0; i <=5; i++){
-
-        const computerChoice = getComputerChoice();
-        const playerChoice = prompt(`What's your choice?`);
-
-        result = playRound(computerChoice, playerChoice);
-
-        if(result.includes('Win')){
-            playerScore++;
-        } else if (result.includes('Lose')){
-            computerScore++; 
-        } 
-        alert(result);
-    }
-
-    if(playerScore > computerScore){
-        alert('Player beat Computer');
-    } else if (playerScore < computerScore){
-        alert('Computer beat Player');
-    } else {
-        alert('The result is Tie!');
-    }
-
-    alert(`Player Score ${playerScore}`);
-    alert(`Computer Score ${computerScore}`);
-}
-
+let playerSelection = "";
 
 const rockBtn = document.getElementById('rock');
-let rock = 0;
 rockBtn.addEventListener('click', () => {
     const rockContent = document.getElementById('displayPlayerSelection');
-
     rockContent.textContent='✊';
-    rock = 1;
-
-    console.log(rock)
+    playerSelection = 'Rock';
 });
 
 const paperBtn = document.getElementById('paper');
-let paper = 0;
 paperBtn.addEventListener('click', () => {
     const paperContent = document.getElementById('displayPlayerSelection');
 
     paperContent.textContent='✋';
-    paper = 1;
-
-    console.log(paper)
+    playerSelection = 'Paper';
 });
 
-
 const scissorsBtn = document.getElementById('scissors');
-let scissors = 0;
 scissorsBtn.addEventListener('click', () => {
     const scissorsContent = document.getElementById('displayPlayerSelection');
 
     scissorsContent.textContent='✌️';
-    rock = 1;
+    playerSelection = 'Scissors';
 
-    console.log(rock)
 });
+
+const runGameBtn = document.getElementById('playRound');
+runGameBtn.addEventListener('click', () => {
+    let computerSelection = getComputerChoice();
+
+    const displayComputerContent = document.getElementById('displayComputerSelection');
+    
+    let computerChoice = "";
+    if(computerSelection == "Rock"){
+        computerChoice = '✊';
+    } else if (computerSelection == "Paper") {
+        computerChoice = '✋';
+    } else if (computerSelection == "Scissors"){
+        computerChoice = '✌️';
+    }
+
+    displayComputerContent.textContent = computerChoice;
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+    let player_selection_num_val = convertSelection(playerSelection);
+    let computer_selection_num_val = convertSelection(computerSelection);
+    
+    const displayOutput = document.getElementById('output');
+    let round_result = '';
+
+    for (let i=0; i <=5; i++){
+        if (player_selection_num_val > computer_selection_num_val){
+            round_result = 'Player Wins!';
+        } else if (player_selection_num_val == computer_selection_num_val){
+            round_result = `It's a Tie!`;
+        } else {
+            round_result = 'Computer Wins!';
+        }
+    }
+
+    displayOutput.textContent = round_result;
+});
+
+function convertSelection(selection) {
+
+    selection_num_val = 0;
+    if (selection == 'Rock'){
+        selection_num_val = 1;
+    } else if (selection == 'Paper') {
+        selection_num_val = 2;
+    } else if (selection == 'Scissors') {
+        selection_num_val = 3;
+    }
+
+    return selection_num_val
+}
 

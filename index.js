@@ -2,11 +2,11 @@
 function getComputerChoice() {
     const randomizer = Math.floor(Math.random() * 3) + 1;
     let computerChoice = "";
-    if(randomizer == 1) {
+    if(randomizer == 3) {
         computerChoice = "Rock";
-    } else if (randomizer == 2) {
+    } else if (randomizer == 1) {
         computerChoice = "Paper";
-    } else if (randomizer == 3) {
+    } else if (randomizer == 2) {
         computerChoice = "Scissors";
     }
 
@@ -82,11 +82,11 @@ function convertSelection(selection) {
 
     selection_num_val = 0;
     if (selection == 'Rock'){
-        selection_num_val = 1;
-    } else if (selection == 'Paper') {
-        selection_num_val = 2;
-    } else if (selection == 'Scissors') {
         selection_num_val = 3;
+    } else if (selection == 'Paper') {
+        selection_num_val = 1;
+    } else if (selection == 'Scissors') {
+        selection_num_val = 2;
     }
 
     return selection_num_val

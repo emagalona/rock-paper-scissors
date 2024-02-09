@@ -86,3 +86,38 @@ function game(){
     alert(`Computer Score ${computerScore}`);
 }
 
+
+const rockBtn = document.getElementById('rock');
+let rock = 0;
+rockBtn.addEventListener('click', () => {
+    const rockContent = document.getElementById('displayPlayerSelection');
+
+    rockContent.textContent='✊';
+    rock = 1;
+
+    console.log(rock)
+});
+
+const paperBtn = document.getElementById('paper');
+let paper = 0;
+paperBtn.addEventListener('click', () => {
+    const paperContent = document.getElementById('displayPlayerSelection');
+
+    paperContent.textContent='✋';
+    paper = 1;
+
+    console.log(paper)
+});
+
+
+const scissorsBtn = document.getElementById('scissors');
+let scissors = 0;
+scissorsBtn.addEventListener('click', () => {
+    const scissorsContent = document.getElementById('displayPlayerSelection');
+
+    scissorsContent.textContent='✌️';
+    rock = 1;
+
+    console.log(rock)
+});
+
